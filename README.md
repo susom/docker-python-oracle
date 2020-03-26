@@ -4,12 +4,12 @@ This docker image serves as an environment to execute python scripts with oracle
 
 ## build
 ```bash
-docker build -t web .
+docker build -t dpo .
 ```
 
 ## run
 ```bash
-docker run -d -p 80:5000 --name web -v <host-absolute-path>:/opt/data/api web
+docker run -d -p 80:5000 --name dpo -v <host-absolute-path>:/opt/data/api dpo
 ```
 ## Notes for users using **Docker Machine**
 `host-absolute-path`: directory on **Docker Engine**'s host

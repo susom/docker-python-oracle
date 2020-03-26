@@ -1,6 +1,6 @@
 # INSTALL PYTHON IMAGE
-FROM python:3.6
-MAINTAINER Peisheng Jiang <egojason@gmail.com>
+FROM python:3.7
+MAINTAINER Andrew Martin <andy123@stanford.edu>
 
 # INSTALL TOOLS
 RUN apt-get update \
@@ -22,6 +22,7 @@ ENV OCI_LIB_DIR=/opt/oracle/instantclient
 ENV OCI_INCLUDE_DIR=/opt/oracle/instantclient/sdk/include
 
 # INSTALL INSTANTCLIENT AND DEPENDENCIES
+RUN chmod +x ./install-instantclient.sh
 RUN ./install-instantclient.sh \
     && pip install -r requirements.txt
 
